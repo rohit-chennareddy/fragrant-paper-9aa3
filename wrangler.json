@@ -1,0 +1,30 @@
+{
+  "name": "security-board-reporting",
+  "main": "./dist/index.js",
+  "assets": {
+    "directory": "./dist"
+  },
+  "compatibility_date": "2024-11-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  },
+  "upload_source_maps": true,
+  "vars": {
+    "EXAMPLE_VALUE": "example_value"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "security-report-data",
+      "database_id": "f223b663-b8c2-416a-bf12-6a57153fe429"
+    }
+  ],
+  "workflows": [
+    {
+      "name": "security-board-reporting-customer-workflow",
+      "binding": "CUSTOMER_WORKFLOW",
+      "class_name": "CustomerWorkflow"
+    }
+  ]
+}
